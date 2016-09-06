@@ -1,7 +1,7 @@
 'use strict';
 
 /** 
- * @file Fast async (micro)task queue for all platforms (used asap.js code).
+ * @file Fast async (micro)task queue for all platforms (based on asap.js code)
  */
 
 var queue = [], nextTask, trigger, node,

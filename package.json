@@ -1,6 +1,6 @@
 {
   "name": "next-task",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Implementation of nextTick (microtask queue) for all platforms (like asap.js).",
   "main": "src/next-task.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "devDependencies": {
     "asap": "^2.0.0",
     "benchmark": "^2.0.0",
-    "webpack": ">=2.0.0",
+    "webpack": "^2.1.0",
     "mocha": "^2.0.0",
     "opener": "*"
   },

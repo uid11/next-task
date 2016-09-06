@@ -1,0 +1,36 @@
+<!DOCTYPE html><meta charset="utf-8"><title>Benchmarks</title>
+<script src="../build/benchmark.js"></script>
+<script>
+'use strict';
+
+window.onload = function() {
+
+  function addMessage(msg) {
+    var p = document.createElement('P');
+    p.style = 'font-size: 20px; margin: 40px;';
+    p.innerHTML = String(msg);
+    document.body.appendChild(p);
+  }
+
+  addMessage('Wait...');
+
+  /* Prevent unuse define in benchmark.js */
+  window.define = Function(), define.amd = {};
+
+  benchmark.onComplete = function() {
+    var results = this.results;
+
+    document.body.innerHTML = '';
+
+    if (!results) return addMessage('No results.');
+
+    for (var i = 0; i < results.length; i++) {
+      addMessage(results[i]);
+    }
+  };
+
+  benchmark.run();
+
+};
+
+</script>

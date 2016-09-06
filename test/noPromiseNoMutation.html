@@ -1,0 +1,30 @@
+<!DOCTYPE html><meta charset="utf-8"><title>Mocha tests</title>
+<link href="../node_modules/mocha/mocha.css" rel="stylesheet">
+<script src="../node_modules/mocha/mocha.js"></script>
+<div id="mocha"></div>
+<script>mocha.setup('bdd');</script>
+
+<script>
+var _nativePromise = window.Promise,
+    _nativeMutationObserver = window.MutationObserver,
+    _nativeWebKitMutationObserver = window.WebKitMutationObserver,
+    Promise = function() { return {then: Object}; },
+    MutationObserver = undefined,
+    WebKitMutationObserver = undefined;
+</script>
+
+<script src="../build/nextTask.js"></script>
+
+<script>
+Promise = _nativePromise;
+MutationObserver = _nativeMutationObserver;
+WebKitMutationObserver = _nativeWebKitMutationObserver;
+</script>
+
+<script src="../build/test.js"></script>
+
+<script>
+document.title = 'nextTask noPromise noMutation tests';
+
+mocha.run();
+</script>

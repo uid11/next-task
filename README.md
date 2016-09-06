@@ -34,8 +34,7 @@ If you need to perform a long (macrotask) queue of heavy tasks, use [setImmediat
 Note that, like rawAsap, nextTask does not catch the errors (to work as soon as possible).
 
 
-## Differences from rawAsap
-
+## Differences from rawAsap ##
 - **Errors**:
 ```js
 /**
@@ -74,19 +73,18 @@ nextTask.setCapacity({}); /* return 1024 */
 nextTask.setCapacity(100); /* return 100 */
 ```
 
-## Build
-
-Install all the packages from devDependencies in ./node_modules, then run:
+## Build ##
+Install all the packages from devDependencies in ./node_modules and run build:
 ```bash
-npm run build
+$ npm install
+$ npm run build
 ```
 Then you will be able to perform tests and benchmark.
 
-## Benchmarks
-
+## Benchmarks ##
 ```bash
-npm run benchmark:node
-npm run benchmark:browser
+$ npm run benchmark:node
+$ npm run benchmark:browser
 ```
 This is benchmark from [asap/benchmarks](https://github.com/kriskowal/asap/tree/master/benchmarks), in which different ways queuing added for comparison.
 The results are not very stable and not fully explained; for example, a typical result in Node.js:
@@ -121,8 +119,8 @@ There "Promise" is run each task by Promise and "Promise[]" means the use of the
 
 ## Tests ##
 ```bash
-npm run test:node
-npm run test:browser
+$ npm run test:node
+$ npm run test:browser
 ```
 
 ## License ##

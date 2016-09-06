@@ -2,7 +2,7 @@
 describe('nextTask', function() {
 
 var scaffold = require("./scaffold");
-var nextTask = require("../src/nextTask");
+var nextTask = require("../src/next-task");
 
 var syncFlush = 0;
 

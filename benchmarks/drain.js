@@ -8,7 +8,7 @@ var rawAsap = require("asap/raw");
 /* asap default capacity */
 var CAPACITY = 1024;
 
-var nextTask = require("../src/nextTask");
+var nextTask = require("../src/next-task");
 
 nextTask.setCapacity(CAPACITY);
 

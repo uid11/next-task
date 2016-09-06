@@ -6,7 +6,7 @@ module.exports = {
   context: __dirname,
   entry: {
     test: './test/test',
-    nextTask: './test/nextTask',
+    nextTask: './test/next-task',
     benchmark: './benchmarks'
   },
   output: {

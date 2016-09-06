@@ -1,7 +1,10 @@
+# next-task #
+
+  [![NPM version][npm-image]][npm-url] ![dependencies][dependencies-image] [![License MIT][license-image]](LICENSE)
+
   Fast microtask queue for all platforms, equivalent rawAsap (based on the ideas and source of rawAsap), but a little faster.
 
-## Usage
-
+## Usage ##
 ```js
 var nextTask = require('next-task');
 
@@ -116,15 +119,16 @@ setTimeout[] x 226 ops/sec ±1.85% (50 runs sampled)
 
 There "Promise" is run each task by Promise and "Promise[]" means the use of the task queue, so that the whole queue is run with one call Promise; and similarly for the other methods.
 
-## Tests
-
+## Tests ##
 ```bash
 npm run test:node
 npm run test:browser
 ```
 
-# License
+## License ##
+  [MIT](LICENSE)
 
-  MIT
-
-[npm-url]: https://www.npmjs.com/package/next-task "nextTask"
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg "license-image"
+[dependencies-image]: https://img.shields.io/gemnasium/mathiasbynens/he.svg?maxAge=2592000 "dependencies-image"
+[npm-image]: https://img.shields.io/npm/v/next-task.svg "npm-image"
+[npm-url]: https://www.npmjs.com/package/next-task "next-task"

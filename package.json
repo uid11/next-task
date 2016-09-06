@@ -2,7 +2,7 @@
   "name": "next-task",
   "version": "0.1.3",
   "description": "Implementation of nextTick (microtask queue) for all platforms (like asap.js).",
-  "main": "src/nextTask.js",
+  "main": "src/next-task.js",
   "scripts": {
     "test:browser": "./node_modules/opener/opener.js ./test/test.html && ./node_modules/opener/opener.js ./test/noPromise.html && ./node_modules/opener/opener.js ./test/noPromiseNoMutation.html",
     "test:node": "./node_modules/mocha/bin/mocha",
@@ -28,5 +28,13 @@
     "opener": "*"
   },
   "author": "uid-11222",
-  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/uid-11222/next-task/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/uid-11222/next-task",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uid-11222/next-task"
+  }
 }

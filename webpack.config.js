@@ -14,7 +14,6 @@ module.exports = {
     filename: '[name].js',
     library: '[name]'
   },
-  watch: true,
   watchOptions: {
     aggregateTimeout: 200
   },

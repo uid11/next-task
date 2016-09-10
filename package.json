@@ -1,6 +1,6 @@
 {
   "name": "next-task",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Implementation of nextTick (microtask queue) for all platforms (like asap.js).",
   "main": "src/next-task.js",
   "scripts": {
@@ -9,6 +9,9 @@
     "benchmark:browser": "./node_modules/opener/opener.js ./benchmarks/index.html",
     "benchmark:node": "node benchmarks",
     "build": "./node_modules/webpack/bin/webpack.js --display-modules -v"
+  },
+  "browser": {
+    "./benchmarks/scaffold.js": "./benchmarks/browser-scaffold.js"
   },
   "keywords": [
     "nextTick",

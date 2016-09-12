@@ -1,17 +1,17 @@
 {
   "name": "next-task",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Implementation of nextTick (microtask queue) for all platforms (like asap.js).",
   "main": "src/next-task.js",
   "scripts": {
-    "test:browser": "./node_modules/opener/opener.js ./test/test.html && ./node_modules/opener/opener.js ./test/noPromise.html && ./node_modules/opener/opener.js ./test/noPromiseNoMutation.html",
-    "test:node": "./node_modules/mocha/bin/mocha",
-    "benchmark:browser": "./node_modules/opener/opener.js ./benchmarks/index.html",
-    "benchmark:node": "node benchmarks",
+    "test:browser": "./node_modules/opener/opener.js ./test/test.html && ./node_modules/opener/opener.js ./test/no-promise.html && ./node_modules/opener/opener.js ./test/no-promise-no-mutation.html",
+    "test:node": "./node_modules/mocha/bin/mocha ./test/test.js",
+    "benchmark:browser": "./node_modules/opener/opener.js ./benchmark/index.html",
+    "benchmark:node": "node benchmark",
     "build": "./node_modules/webpack/bin/webpack.js --display-modules -v"
   },
   "browser": {
-    "./benchmarks/scaffold.js": "./benchmarks/browser-scaffold.js"
+    "./benchmark/scaffold.js": "./benchmark/browser-scaffold.js"
   },
   "keywords": [
     "nextTick",
@@ -27,7 +27,7 @@
     "asap": "^2.0.0",
     "benchmark": "^2.0.0",
     "webpack": ">=1.0.0",
-    "mocha": "^2.0.0",
+    "mocha": "^3.0.0",
     "opener": "*",
     "lodash": "^4.15.0",
     "platform": "^1.3.1"

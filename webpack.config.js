@@ -6,8 +6,8 @@ module.exports = {
   context: __dirname,
   entry: {
     test: './test/test',
-    nextTask: './test/next-task',
-    benchmark: './benchmarks'
+    nextTask: './test/next-task-export',
+    benchmark: './benchmark'
   },
   output: {
     path: __dirname + '/build',

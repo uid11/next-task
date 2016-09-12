@@ -1,7 +1,7 @@
 'use strict'; /* global describe, it  */
 describe('nextTask', function() {
 
-var scaffold = require("./scaffold");
+var scaffold = require("./scaffold-for-tests");
 var nextTask = require("../src/next-task");
 
 var syncFlush = 0;

@@ -1,8 +1,10 @@
 # next-task #
 
-  [![NPM version][npm-image]][npm-url] ![dependencies][dependencies-image] [![License MIT][license-image]](LICENSE)
+[![NPM version][npm-image]][npm-url] ![dependencies][dependencies-image] [![License MIT][license-image]](LICENSE)
 
-  Fast microtask queue for all platforms, equivalent rawAsap (based on the ideas and source of rawAsap), but a little faster.
+[![NPM](https://nodei.co/npm/next-task.png)](https://nodei.co/npm/next-task/)
+
+Fast microtask queue for all platforms, equivalent rawAsap (based on the ideas and source of rawAsap), but a little faster.
 
 ## Usage ##
 ```js
@@ -31,11 +33,12 @@ nextTask(task);
 About rawAsap and microtasks: [rawAsap](https://github.com/kriskowal/asap#raw-asap).
 If you need queue of animation tasks, use [raf](https://github.com/chrisdickinson/raf) instead, for synchronize with rendering loop.
 If you need to perform a long (macrotask) queue of heavy tasks, use [setImmediate](https://github.com/YuzuJS/setImmediate) to give the browser the ability to handle current events.
-Note that, like rawAsap, nextTask does not catch the errors (to work as soon as possible).
+Note that, like rawAsap, **next-task** does not catch the errors (to work as soon as possible).
 
 
 ## Differences from rawAsap ##
-- **Errors**:
+
+### Errors ###
 ```js
 /**
  * If a task does throw an error, with rawAsap you need
@@ -50,11 +53,14 @@ rawAsap.requestFlush();
 nextTask();
 ```
 
-- **Domains**: nextTask does not support domains for Node.js (rasAsap does).
+### Domains ###
+**next-task** does not support domains for Node.js (rasAsap does).
 
-- **Promise**: nextTask uses native Promise, if it is available (only native, and ignores any polyfills). More information: [Consider using Promise.prototype.then](https://github.com/kriskowal/asap/issues/54).
+### Promise ###
+**next-task** uses native Promise, if it is available (only native, and ignores any polyfills). More information: [Consider using Promise.prototype.then](https://github.com/kriskowal/asap/issues/54).
 
-- **Property 'use'** points to the technology used:
+### Property 'use' ###
+Property 'use' points to the technology used:
 ```js
 /** In the order of attempts to use: */
 nextTask.use === 'setImmediate'     || /* only Node.js */
@@ -62,9 +68,10 @@ nextTask.use === 'setImmediate'     || /* only Node.js */
                  'MutationObserver' || /* modern browsers */
                  'setTimeout'          /* all other platforms */
 ```
-- **Method 'setCapacity'** to limit the memory usage (more information: [function to change rawAsap.capacity value must be added](https://github.com/kriskowal/asap/issues/53)):
+
+### Method 'setCapacity' ###
+Method 'setCapacity' limited the memory usage (more information: [function to change rawAsap.capacity value must be added](https://github.com/kriskowal/asap/issues/53)):
 ```js
-/* return new actual value */
 nextTask.setCapacity(1024); /* return 1024 */
 
 nextTask.setCapacity(); /* return 1024 */
@@ -124,7 +131,7 @@ $ npm run test:browser
 ```
 
 ## License ##
-  [MIT](LICENSE)
+[MIT](LICENSE)
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg "license-image"
 [dependencies-image]: https://img.shields.io/gemnasium/mathiasbynens/he.svg?maxAge=2592000 "dependencies-image"

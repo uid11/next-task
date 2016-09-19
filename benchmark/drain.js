@@ -5,7 +5,7 @@ var benchmark = require("./scaffold");
 var asap = require("asap");
 var rawAsap = require("asap/raw");
 
-/* asap default capacity */
+/** asap default capacity */
 var CAPACITY = 1024;
 
 var nextTask = require("../src/next-task");

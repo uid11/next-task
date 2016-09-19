@@ -10,7 +10,7 @@ var global = Function('return this')(),
     window = global.window,
     document = global.document;
 
-/* Use global nextTask for browser tests with different "use". */
+/** Use global nextTask for browser tests with different "use". */
 if (global.nextTask) nextTask = global.nextTask;
 
 var isNode = ({}).toString.call(global.process) === '[object process]';
@@ -26,6 +26,12 @@ if (isNode) {
   document.body.insertBefore(p, document.body.firstChild);
 }
 
+/**
+ * Throw error, if value in not true.
+ * @param  {*} value
+ * @param  {string} msg
+ * @throws {Error}
+ */
 function assert(value, msg) {
   if (value !== true) throw Error('Assert ' + (msg || ''));
 }

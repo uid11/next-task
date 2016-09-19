@@ -130,6 +130,11 @@ if (!nextTask) {
   };
 }
 
+/**
+ * Set capacity value.
+ * @param  {number} value
+ * @return {number} Setted value.
+ */
 nextTask.setCapacity = function setCapacity(value) {
   return capacity = Number(value) || capacity;
 };
